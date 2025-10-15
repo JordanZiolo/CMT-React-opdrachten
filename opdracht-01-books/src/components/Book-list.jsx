@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Book from "./book";
- 
+import Book from "./Book";
+import BookCounter from "./BookCounter";
+
 function BookList() {
   const [books] = useState([
     {
@@ -19,9 +20,10 @@ function BookList() {
       image: "/images/book-3.png",
     },
   ]);
- 
+
   return (
     <div className="book-list">
+      <BookCounter aantal={books.length} />
       {books.map((book, index) => (
         <Book
           key={index}
@@ -33,5 +35,5 @@ function BookList() {
     </div>
   );
 }
- 
-export default BookList;
+
+export default Book-list;
