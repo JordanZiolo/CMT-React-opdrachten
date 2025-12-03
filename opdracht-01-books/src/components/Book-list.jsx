@@ -3,24 +3,11 @@ import Book from "./Book";
 import BookCounter from "./BookCounter";
 
 function BookList() {
-  const [books] = useState([
-    {
-      title: "Harry Potter and The Sorcerers Stone",
-      author: "J. K. Rowling",
-      image: "/images/book-1.png",
-    },
-    {
-      title: "Fantasia VI",
-      author: "Geronimo Stilton",
-      image: "/images/book-2.png",
-    },
-    {
-      title: "The Hunger Games",
-      author: "Suzan Collins",
-      image: "/images/book-3.png",
-    },
-  ]);
-
+ 
+}
+const searchHandler = (e) => {
+  console.log(e.target)
+}
   return (
     <div className="book-list">
       <BookCounter aantal={books.length} />
@@ -34,6 +21,6 @@ function BookList() {
       ))}
     </div>
   );
-}
+
 
 export default BookList;
