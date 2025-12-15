@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import AddMovie from './components/AddMovie';
 import MovieList from './components/MovieList';
@@ -8,19 +9,25 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const addMovie = (newMovie) => {
-    if (!movies.includes(newMovie)) {
+    if (newMovie.trim() === '') {
+      alert('Movie title cannot be empty');
+      return;
+    }
+
+    if (movies.includes(newMovie)) {
       alert('This movie is already in your favorites!');
       return;
     }
-    setMovie([...movies, newMovie]);
+
+    setMovies([...movies, newMovie]);
   };
 
   const deleteMovie = (movieToDelete) => {
-    setMovies(movies.filter((movie) => movie !== movieToDelete));
+    setMovies(movies.filter(movie => movie !== movieToDelete));
   };
 
   return (
-    <section className='container'>
+    <section className="container">
       <Header />
       <AddMovie onAdd={addMovie} />
       <MovieList movies={movies} onDelete={deleteMovie} />
