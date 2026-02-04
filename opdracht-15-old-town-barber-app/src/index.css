@@ -1,0 +1,104 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  min-height: 100vh;
+}
+
+/* APP CONTAINER */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* TITELS */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #d4af37; /* goud */
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #d4af37;
+}
+
+/* ALGEMENE BLOKKEN */
+section,
+form {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* FORM ELEMENTEN */
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #111;
+  color: #fff;
+}
+
+input:disabled {
+  opacity: 0.6;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #8b0000; /* donker rood */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #a30000;
+}
+
+/* SERVICES LIJST */
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #333;
+}
+
+/* AFSPRAKEN LIJST */
+section ul li:last-child {
+  border-bottom: none;
+}
+
+/* EMPTY STATE */
+p {
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .app {
+    padding: 1rem;
+  }
+}
